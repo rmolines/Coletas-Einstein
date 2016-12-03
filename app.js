@@ -20,7 +20,7 @@ app.get('/login-paciente', function (req, res) {
 })
 
 app.get('/menu-paciente', function (req, res) {
-  res.sendFile(__dirname + '/public/views/menu-paciente.html')
+  res.sendFile(__dirname + '/public/views/menu.html')
 })
 
 app.get('/mapa', function (req, res) {

@@ -1,315 +1,290 @@
 <!DOCTYPE html>
 <!-- saved from url=(0075)http://jumpinjackie.github.io/bootstrap-viewer-template/2-column/index.html -->
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <link rel="stylesheet" href="../css/ol.css">
-    <link rel="stylesheet" href="../css/bootstrap.min.css">
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+<html>
+    <head>
+        <title>Localize Sua Amostra</title>
 
-    <title>Localize Sua Amostra</title>
-    <style type="text/css">
-      body { overflow: hidden; }
 
-      .navbar-offset { margin-top: 50px; }
-      #map { position: absolute; top: 50px; bottom: 0px; left: 0px; right: 0px; }
-      #map .ol-zoom { font-size: 1.2em; }
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-      .zoom-top-opened-sidebar { margin-top: 5px; }
-      .zoom-top-collapsed { margin-top: 45px; }
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 
-      .mini-submenu{
-        display:none;  
-        background-color: rgba(255, 255, 255, 0.46);
-        border: 1px solid rgba(0, 0, 0, 0.9);
-        border-radius: 4px;
-        padding: 9px;  
-        /*position: relative;*/
-        width: 42px;
-        text-align: center;
-      }
+        <link rel="stylesheet" href="../css/ol.css">
+        <link rel="stylesheet" href="../css/bootstrap.min.css">
+        <link rel="stylesheet" href="../css/map.css">
+        <link rel="stylesheet" href="../css/modal.css">
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
 
-      .mini-submenu-left {
-        position: absolute;
-        top: 60px;
-        left: .5em;
-        z-index: 40;
-      }
 
-      #map { z-index: 35; }
+        <script type="text/javascript" src="../js/jquery-2.1.1.min.js"></script>
+        <script type="text/javascript" src="../js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="../js/map.js"></script>
+    </head>
 
-      .sidebar { z-index: 45; }
 
-      .main-row { position: relative; top: 0; }
 
-      .mini-submenu:hover{
-        cursor: pointer;
-      }
 
-      .slide-submenu{
-        background: rgba(0, 0, 0, 0.45);
-        display: inline-block;
-        padding: 0 8px;
-        border-radius: 4px;
-        cursor: pointer;
-      }
+    <body>
+       <div class="container">
+            <nav class="navbar navbar-fixed-top navbar-default" role="navigation">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <img src="../images/hospital-albert-einstein-original.jpg" style="width:15%">
+                    </div>
 
-    </style>
-    <script type="text/javascript" src="./js/ol.js"></script>
-    <script type="text/javascript" src="./js/jquery-2.1.1.min.js"></script>
-    <script type="text/javascript" src="./js/bootstrap.min.js"></script>
+                    <form class="navbar-form navbar-left" role="search">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Procurar van por placa">
+                        </div>
 
-    <script type="text/javascript">
+                        <button type="submit" class="btn btn-default">Procurar</button>
+                    </form>
+                </div><!-- /.container-fluid -->
+            </nav>
+        </div>
 
-      function applyMargins() {
-        var leftToggler = $(".mini-submenu-left");
-        if (leftToggler.is(":visible")) {
-          $("#map .ol-zoom")
-            .css("margin-left", 0)
-            .removeClass("zoom-top-opened-sidebar")
-            .addClass("zoom-top-collapsed");
-        } else {
-          $("#map .ol-zoom")
-            .css("margin-left", $(".sidebar-left").width())
-            .removeClass("zoom-top-opened-sidebar")
-            .removeClass("zoom-top-collapsed");
-        }
-      }
+        <div class="navbar-offset"></div>
 
-      function isConstrained() {
-        return $(".sidebar").width() == $(window).width();
-      }
 
-      function applyInitialUIState() {
-        if (isConstrained()) {
-          $(".sidebar-left .sidebar-body").fadeOut('slide');
-          $('.mini-submenu-left').fadeIn();
-        }
-      }
 
-      $(function(){
-        $('.sidebar-left .slide-submenu').on('click',function() {
-          var thisEl = $(this);
-          thisEl.closest('.sidebar-body').fadeOut('slide',function(){
-            $('.mini-submenu-left').fadeIn();
-            applyMargins();
-          });
-        });
+        <div id="map">
 
-        $('.mini-submenu-left').on('click',function() {
-          var thisEl = $(this);
-          $('.sidebar-left .sidebar-body').toggle('slide');
-          thisEl.hide();
-          applyMargins();
-        });
-
-        $(window).on("resize", applyMargins);
-
-        var map = new ol.Map({
-          target: "map",
-          layers: [
-            new ol.layer.Tile({
-              source: new ol.source.OSM()
-            })
-          ],
-          view: new ol.View({
-            center: [0, 0],
-            zoom: 2
-          })
-        });
-        applyInitialUIState();
-        applyMargins();
-      });
-    </script>
-  </head>
-  <body>
-    
-     <div class="container">
-      <nav class="navbar navbar-fixed-top navbar-default" role="navigation">
-        <div class="container-fluid">
-          <!-- Brand and toggle get grouped for better mobile display -->
-          <div class="navbar-header">
-            <img src="../images/hospital-albert-einstein-original.jpg" style="width:15%">
-
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            </button>
-
-            <!--<a class="navbar-brand" href="login.html#">Portal Coletas Einstein</a>-->
             
 
-          </div>
-          <!-- Collect the nav links, forms, and other content for toggling -->
-          <!--<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav">
-            <li class="dropdown">
-                <a href="http://jumpinjackie.github.io/bootstrap-viewer-template/2-column/index.html#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
-                <ul class="dropdown-menu">
-                  <li><a href="http://jumpinjackie.github.io/bootstrap-viewer-template/2-column/index.html#">Action</a></li>
-                  <li><a href="http://jumpinjackie.github.io/bootstrap-viewer-template/2-column/index.html#">Another action</a></li>
-                  <li><a href="http://jumpinjackie.github.io/bootstrap-viewer-template/2-column/index.html#">Something else here</a></li>
-                  <li class="divider"></li>
-                  <li><a href="http://jumpinjackie.github.io/bootstrap-viewer-template/2-column/index.html#">Separated link</a></li>
-                  <li class="divider"></li>
-                  <li><a href="http://jumpinjackie.github.io/bootstrap-viewer-template/2-column/index.html#">One more separated link</a></li>
-                </ul>
-              </li>-->
-              
-            </ul>
-            <form class="navbar-form navbar-left" role="search">
-              <div class="form-group">
-                <input type="text" class="form-control" placeholder="Procurar van por placa">
-              </div>
-              <button type="submit" class="btn btn-default">Procurar</button>
-            </form>
-            <!--<ul class="nav navbar-nav navbar-right">
-              <li><!--<a href="http://jumpinjackie.github.io/bootstrap-viewer-template/2-column/index.html#">Link</a></li>
-              <li class="dropdown">
-                <a href="http://jumpinjackie.github.io/bootstrap-viewer-template/2-column/index.html#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
-                <ul class="dropdown-menu">
-                  <li><a href="http://jumpinjackie.github.io/bootstrap-viewer-template/2-column/index.html#">Action</a></li>
-                  <li><a href="http://jumpinjackie.github.io/bootstrap-viewer-template/2-column/index.html#">Another action</a></li>
-                  <li><a href="http://jumpinjackie.github.io/bootstrap-viewer-template/2-column/index.html#">Something else here</a></li>
-                  <li class="divider"></li>
-                  <li><a href="http://jumpinjackie.github.io/bootstrap-viewer-template/2-column/index.html#">Separated link</a></li>
-                </ul>
-              </li>
-            </ul>-->
-            </div><!-- /.navbar-collapse -->
-            </div><!-- /.container-fluid -->
-          </nav>
-        </div>
+            <div class="ol-viewport" style="position: relative; overflow: hidden; width: 100%; height: 100%;">
+                <script>
+                    // Get the modal
+                  function initMap() {
+                    var uluru = {lat: -23.599691, lng:  -46.715144};
+                    var map = new google.maps.Map(document.getElementById('map'), {
+                      zoom: 16,
+                      center: uluru
+                  });
 
-      <div class="navbar-offset"></div>
-      <div id="map">
-      <div class="ol-viewport" style="position: relative; overflow: hidden; width: 100%; height: 100%;">
-            <h3>My Google Maps Demo</h3>
-    <div id="map"></div>
-    <script>
+                    var marker = new google.maps.Marker({
+                      position: uluru,
+                      map: map
+                  });
 
-      function initMap() {
-        var uluru = {lat: -23.599691, lng:  -46.715144};
-        var map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 16,
-          center: uluru
-        });
+                    var image = '../images/new_truck.png';
+                    var truckMarker = new google.maps.Marker({
+                        position: {lat: -23.599421, lng:  -46.715174},
+                        map: map,
+                        icon: image
+                    });
 
-        var marker = new google.maps.Marker({
-          position: uluru,
-          map: map
-        });
+                    var truckMarker2 = new google.maps.Marker({
+                        position: {lat: -23.598504, lng:  -46.716067},
+                        map: map,
+                        icon: image
+                    });
 
-        var image = '../images/new_truck.png';
-  		var truckMarker = new google.maps.Marker({
-    		position: {lat: -23.599421, lng:  -46.715174},
-    		map: map,
-    		icon: image
-  		});
+                    var truckMarker3 = new google.maps.Marker({
+                        position: {lat: -23.599526,lng: -46.719071},
+                        map: map,
+                        icon: image
+                    });
 
-  		var truckMarker2 = new google.maps.Marker({
-    		position: {lat: -23.598504, lng:  -46.716067},
-    		map: map,
-    		icon: image
-  		});
+                    var truckMarker4 = new google.maps.Marker({
+                        position: {lat: -23.602608, lng: -46.713983},
+                        map: map,
+                        icon: image
+                    });
 
-  		var truckMarker3 = new google.maps.Marker({
-    		position: {lat: -23.599526,lng: -46.719071},
-    		map: map,
-    		icon: image
-  		});
-
-  		var truckMarker4 = new google.maps.Marker({
-    		position: {lat: -23.602608, lng: -46.713983},
-    		map: map,
-    		icon: image
-  		});
-
-  		truckMarker.addListener('click', function() {
-    		map.setZoom(8);
-    		map.setCenter(marker.getPosition());
-  		});
-
-  		truckMarker2.addListener('click', function() {
-    		map.setZoom(8);
-    		map.setCenter(marker.getPosition());
-  		});
+                    truckMarker.addListener('click', function() {
+                        map.setCenter(marker.getPosition());
+                        modal.style.display = "block";
 
 
-  		
+                    });
 
-      }
-    </script>
-    <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBkZRlmZqGo1FVbvgDJ_IWKi7coC_Z_w6A&callback=initMap">
-    </script><div class="ol-overlaycontainer"></div><div class="ol-overlaycontainer-stopevent"><div class="ol-zoom ol-unselectable ol-control" style="margin-left: 362px;"><button class="ol-zoom-in ol-has-tooltip" type="button"><span role="tooltip">Zoom in</span>+</button><button class="ol-zoom-out  ol-has-tooltip" type="button"><span role="tooltip">Zoom out</span>−</button></div><div class="ol-rotate ol-unselectable ol-control" style="opacity: 0;"><button class="ol-rotate-reset ol-has-tooltip" name="ResetRotation" type="button"><span role="tooltip">Reset rotation</span><span class="ol-compass" style="transform: rotate(0deg);">⇧</span></button></div><div class="ol-attribution ol-unselectable ol-control ol-collapsed"><ul><li style=""><a href="http://openlayers.org/" target="_blank"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAAA3NCSVQICAjb4U/gAAAACXBIWXMAAAHGAAABxgEXwfpGAAAAGXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48GgAAAhNQTFRF////AP//AICAgP//AFVVQECA////K1VVSbbbYL/fJ05idsTYJFtbbcjbJllmZszWWMTOIFhoHlNiZszTa9DdUcHNHlNlV8XRIVdiasrUHlZjIVZjaMnVH1RlIFRkH1RkH1ZlasvYasvXVsPQH1VkacnVa8vWIVZjIFRjVMPQa8rXIVVkXsXRsNveIFVkIFZlIVVj3eDeh6GmbMvXH1ZkIFRka8rWbMvXIFVkIFVjIFVkbMvWH1VjbMvWIFVlbcvWIFVla8vVIFVkbMvWbMvVH1VkbMvWIFVlbcvWIFVkbcvVbMvWjNPbIFVkU8LPwMzNIFVkbczWIFVkbsvWbMvXIFVkRnB8bcvW2+TkW8XRIFVkIlZlJVloJlpoKlxrLl9tMmJwOWd0Omh1RXF8TneCT3iDUHiDU8LPVMLPVcLPVcPQVsPPVsPQV8PQWMTQWsTQW8TQXMXSXsXRX4SNX8bSYMfTYcfTYsfTY8jUZcfSZsnUaIqTacrVasrVa8jTa8rWbI2VbMvWbcvWdJObdcvUdszUd8vVeJaee87Yfc3WgJyjhqGnitDYjaarldPZnrK2oNbborW5o9bbo9fbpLa6q9ndrL3ArtndscDDutzfu8fJwN7gwt7gxc/QyuHhy+HizeHi0NfX0+Pj19zb1+Tj2uXk29/e3uLg3+Lh3+bl4uXj4ufl4+fl5Ofl5ufl5ujm5+jmySDnBAAAAFp0Uk5TAAECAgMEBAYHCA0NDg4UGRogIiMmKSssLzU7PkJJT1JTVFliY2hrdHZ3foSFhYeJjY2QkpugqbG1tre5w8zQ09XY3uXn6+zx8vT09vf4+Pj5+fr6/P39/f3+gz7SsAAAAVVJREFUOMtjYKA7EBDnwCPLrObS1BRiLoJLnte6CQy8FLHLCzs2QUG4FjZ5GbcmBDDjxJBXDWxCBrb8aM4zbkIDzpLYnAcE9VXlJSWlZRU13koIeW57mGx5XjoMZEUqwxWYQaQbSzLSkYGfKFSe0QMsX5WbjgY0YS4MBplemI4BdGBW+DQ11eZiymfqQuXZIjqwyadPNoSZ4L+0FVM6e+oGI6g8a9iKNT3o8kVzNkzRg5lgl7p4wyRUL9Yt2jAxVh6mQCogae6GmflI8p0r13VFWTHBQ0rWPW7ahgWVcPm+9cuLoyy4kCJDzCm6d8PSFoh0zvQNC5OjDJhQopPPJqph1doJBUD5tnkbZiUEqaCnB3bTqLTFG1bPn71kw4b+GFdpLElKIzRxxgYgWNYc5SCENVHKeUaltHdXx0dZ8uBI1hJ2UUDgq82CM2MwKeibqAvSO7MCABq0wXEPiqWEAAAAAElFTkSuQmCC"></a></li><li>Tiles © <a href="http://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC BY-SA</a></li><li>Data © <a href="http://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="http://www.openstreetmap.org/copyright">ODbL</a></li></ul><button class="ol-has-tooltip" type="button"><span>i</span><span role="tooltip">Attributions</span></button></div></div></div></div>
-      <div class="row main-row">
+                    truckMarker2.addListener('click', function() {
+                        map.setCenter(marker.getPosition());
+                        modal.style.display = "block";
+                    });
+
+                    truckMarker3.addListener('click', function() {
+                        map.setCenter(marker.getPosition());
+                        modal.style.display = "block";
+                    });
+
+                    truckMarker4.addListener('click', function() {
+                        map.setCenter(marker.getPosition());
+                        modal.style.display = "block";
+                    });
+
+                    span.onclick = function() {
+                        modal.style.display = "none";
+                    }
+
+                    // When the user clicks anywhere outside of the modal, close it
+                    window.onclick = function(event) {
+                        if (event.target == modal) {
+                            modal.style.display = "none";
+                        }
+                    }
+
+
+
+
+                    
+
+                }
+            </script>
+           
+
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBkZRlmZqGo1FVbvgDJ_IWKi7coC_Z_w6A&callback=initMap">
+    </script><div class="ol-overlaycontainer"></div><div class="ol-overlaycontainer-stopevent"><div class="ol-zoom ol-unselectable ol-control" style="margin-left: 362px;"><button class="ol-zoom-in ol-has-tooltip" type="button"><span role="tooltip">Zoom in</span>+</button><button class="ol-zoom-out  ol-has-tooltip" type="button"><span role="tooltip">Zoom out</span>−</button></div><div class="ol-rotate ol-unselectable ol-control" style="opacity: 0;"><button class="ol-rotate-reset ol-has-tooltip" name="ResetRotation" type="button"><span role="tooltip">Reset rotation</span><span class="ol-compass" style="transform: rotate(0deg);">⇧</span></button></div><div class="ol-attribution ol-unselectable ol-control ol-collapsed"><ul><li style=""><a href="http://openlayers.org/" target="_blank"></li><li>Tiles © <a href="http://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC BY-SA</a></li><li>Data © <a href="http://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="http://www.openstreetmap.org/copyright">ODbL</a></li></ul><button class="ol-has-tooltip" type="button"><span>i</span><span role="tooltip">Attributions</span></button></div></div></div></div>
+    <div class="row main-row">
         <div class="col-sm-4 col-md-3 sidebar sidebar-left pull-left">
-          <div class="panel-group sidebar-body" id="accordion-left">
-            <div class="panel panel-default">
-              <div class="panel-heading">
-                <h4 class="panel-title">
-                  <a data-toggle="collapse" href="#layers">
-                    <i class="fa fa-list-alt"></i>
-                    Em movimento:
-                  </a>
-                  <span class="pull-right slide-submenu">
-                    <i class="fa fa-chevron-left"></i>
-                  </span>
-                </h4>
-              </div>
-              <div id="layers" class="panel-collapse collapse in" >
-                <div class="panel-body list-group" style="max-height: 1%">
-                  <a href="#" class="list-group-item">
+            <div class="panel-group sidebar-body" id="accordion-left">
 
-                    <i class="fa fa-truck"></i> EIN-2220
-                  </a>
-                  <a href="#" class="list-group-item">
-                    <i class="fa fa-truck"></i> HOS-3456 
-                  </a>
-                  <a href="#" class="list-group-item">
-                    <i class="fa fa-truck"></i> GRU-1010
-                  </a>
-                  <a href="#" class="list-group-item">
-                    <i class="fa fa-truck"></i> GZO-5681
-                  </a>
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" href="#layers">
+                                <i class="fa fa-list-alt"></i>
+                                Em movimento:
+                            </a>
+
+                            <span class="pull-right" id="slide-submenu">
+                                <i class="fa fa-chevron-left"></i>
+                            </span>
+                        </h4>
+                    </div>
+                    
+                    <div id="layers" class="panel-collapse collapse in" >
+                        <div class="panel-body list-group" style="max-height: 1%">
+                            <a href="#" id="plate1" class="list-group-item">
+                                <i class="fa fa-truck"></i> EIN-2220
+                            </a>
+
+                            <a href="#" id="plate2" class="list-group-item">
+                                <i class="fa fa-truck"></i> HOS-3456 
+                            </a>
+
+                            <a href="#" id="plate3" class="list-group-item">
+                                <i class="fa fa-truck"></i> GRU-1010
+                            </a>
+
+                            <a href="#" id="plate4" class="list-group-item">
+                                <i class="fa fa-truck"></i> GZO-5681
+                            </a>   
+                        </div>
+                    </div>
                 </div>
-              </div>
-            </div>
-            <div class="panel panel-default">
-              <div class="panel-heading">
-                <h4 class="panel-title">
-                  <a data-toggle="collapse" href="#properties">
-                    <i class="fa fa-list-alt"></i>
-                     Mais Detalhes
-                  </a>
-                </h4>
-              </div>
-              <div id="properties" class="panel-collapse collapse in">
-                <div class="panel-body">
-                  <p>
-                 		17 Vans em movimento</p>
-                  <p>
-                		5432 Amostras em transporte
-                  </p>
-                  <p>
-                  	Horário de Saída 08h03
-                  </p>
-                  <p>
-                  	Horário de Estimado de Chegada 08h03
-                  </p>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" href="#properties">
+                                <i class="fa fa-list-alt"></i>
+                                Mais Detalhes
+                            </a>
+                        </h4>
+                    </div>
+
+                    <div id="properties" class="panel-collapse collapse in">
+                        <div class="panel-body">
+                            <p ><a href="#" style="color:#c15603">2 transportes solicitam sua atenção!</a></p>
+                            <p>17 Vans em movimento</p>
+                            <p>5432 Amostras em transporte</p>
+                        </div>
+                    </div>
                 </div>
-              </div>
+
+
+                <div id="myModal" class="modal">
+
+                    <!-- Modal content -->
+                    <div class="modal-content">
+                        <span class="close">x</span>
+
+                        <h3>Status das amostras</h3>           
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>ID Cooler</th>
+                                        <th>Amostras</th>
+                                        <th>Temperatura</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>A234NFOW49</td>
+                                        <td><a href="amostras.html">35 amostras</a></td>
+                                        <td style="color: #0377bf">11ºC</td>
+                                    </tr>
+                                    <tr>
+                                        <td>FDJ038GHDS</td>
+                                        <td><a href="amostras.html">35 amostras</a></td>
+                                        <td style="color: #bf0303">17ºC</td>
+                                    </tr>
+                                    <tr>
+                                        <td>DM438DJSH2</td>
+                                        <td><a href="amostras.html">35 amostras</a></td>
+                                        <td style="color: #c15603">13ºC</td>
+                                    </tr>
+                                    <tr>
+                                        <td>A234HGT22F</td>
+                                        <td><a href="amostras.html">35 amostras</a></td>
+                                        <td style="color: #0377bf">11ºC</td>
+                                    </tr>
+                                    <tr>
+                                        <td>QWERTY56F4</td>
+                                        <td><a href="amostras.html">35 amostras</a></td>
+                                        <td style="color: #0377bf">10ºC</td>
+                                    </tr>
+                                </tbody>
+                          </table>
+                    </div>
+                </div>
+
+
+                <script>
+                    // Get the modal
+                    var modal = document.getElementById('myModal');
+
+                    // Get the button that opens the modal
+                    var btn = document.getElementById("myBtn");
+
+                    // Get the button that opens the modal
+                    var plate1 = document.getElementById("plate1");
+
+                    // Get the button that opens the modal
+                    var plate3 = document.getElementById("plate3");
+
+                    // Get the <span> element that closes the modal
+                    var span = document.getElementsByClassName("close")[0];
+
+                    plate1.onclick = function() {
+                       modal.style.display = "block";
+                    }
+
+                    plate2.onclick = function() {
+                       modal.style.display = "block";
+                    }
+
+                    plate3.onclick = function() {
+                        modal.style.display = "block";
+                    }
+
+                    plate4.onclick = function() {
+                       modal.style.display = "block";
+                    }
+
+                    
+                </script>
+
             </div>
-          </div>
         </div>
-      </div>
-      <div class="mini-submenu mini-submenu-left pull-left">
+    </div>
+
+
+    <div class="mini-submenu mini-submenu-left pull-left">
         <i class="fa fa-list-alt"></i>
-      </div>
-    
-  
-</body></html>
+    </div>
+
+
+    </body></html>

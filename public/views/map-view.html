@@ -154,72 +154,104 @@
             </div><!-- /.navbar-collapse -->
             </div><!-- /.container-fluid -->
           </nav>
+
         </div>
 
-      <div class="navbar-offset"></div>
-      <div id="map">
-      <div class="ol-viewport" style="position: relative; overflow: hidden; width: 100%; height: 100%;">
-            <h3>My Google Maps Demo</h3>
-    <div id="map"></div>
-    <script>
-
-      function initMap() {
-        var uluru = {lat: -23.599691, lng:  -46.715144};
-        var map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 16,
-          center: uluru
-        });
-
-        var marker = new google.maps.Marker({
-          position: uluru,
-          map: map
-        });
-
-        var image = '../images/new_truck.png';
-  		var truckMarker = new google.maps.Marker({
-    		position: {lat: -23.599421, lng:  -46.715174},
-    		map: map,
-    		icon: image
-  		});
-
-  		var truckMarker2 = new google.maps.Marker({
-    		position: {lat: -23.598504, lng:  -46.716067},
-    		map: map,
-    		icon: image
-  		});
-
-  		var truckMarker3 = new google.maps.Marker({
-    		position: {lat: -23.599526,lng: -46.719071},
-    		map: map,
-    		icon: image
-  		});
-
-  		var truckMarker4 = new google.maps.Marker({
-    		position: {lat: -23.602608, lng: -46.713983},
-    		map: map,
-    		icon: image
-  		});
-
-  		truckMarker.addListener('click', function() {
-    		map.setZoom(8);
-    		map.setCenter(marker.getPosition());
-  		});
-
-  		truckMarker2.addListener('click', function() {
-    		map.setZoom(8);
-    		map.setCenter(marker.getPosition());
-  		});
+        <div class="navbar-offset"></div>
 
 
-  		
 
-      }
-    </script>
-    <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBkZRlmZqGo1FVbvgDJ_IWKi7coC_Z_w6A&callback=initMap">
-    </script><div class="ol-overlaycontainer"></div><div class="ol-overlaycontainer-stopevent"><div class="ol-zoom ol-unselectable ol-control" style="margin-left: 362px;"><button class="ol-zoom-in ol-has-tooltip" type="button"><span role="tooltip">Zoom in</span>+</button><button class="ol-zoom-out  ol-has-tooltip" type="button"><span role="tooltip">Zoom out</span>−</button></div><div class="ol-rotate ol-unselectable ol-control" style="opacity: 0;"><button class="ol-rotate-reset ol-has-tooltip" name="ResetRotation" type="button"><span role="tooltip">Reset rotation</span><span class="ol-compass" style="transform: rotate(0deg);">⇧</span></button></div><div class="ol-attribution ol-unselectable ol-control ol-collapsed"><ul><li style=""><a href="http://openlayers.org/" target="_blank"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAAA3NCSVQICAjb4U/gAAAACXBIWXMAAAHGAAABxgEXwfpGAAAAGXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48GgAAAhNQTFRF////AP//AICAgP//AFVVQECA////K1VVSbbbYL/fJ05idsTYJFtbbcjbJllmZszWWMTOIFhoHlNiZszTa9DdUcHNHlNlV8XRIVdiasrUHlZjIVZjaMnVH1RlIFRkH1RkH1ZlasvYasvXVsPQH1VkacnVa8vWIVZjIFRjVMPQa8rXIVVkXsXRsNveIFVkIFZlIVVj3eDeh6GmbMvXH1ZkIFRka8rWbMvXIFVkIFVjIFVkbMvWH1VjbMvWIFVlbcvWIFVla8vVIFVkbMvWbMvVH1VkbMvWIFVlbcvWIFVkbcvVbMvWjNPbIFVkU8LPwMzNIFVkbczWIFVkbsvWbMvXIFVkRnB8bcvW2+TkW8XRIFVkIlZlJVloJlpoKlxrLl9tMmJwOWd0Omh1RXF8TneCT3iDUHiDU8LPVMLPVcLPVcPQVsPPVsPQV8PQWMTQWsTQW8TQXMXSXsXRX4SNX8bSYMfTYcfTYsfTY8jUZcfSZsnUaIqTacrVasrVa8jTa8rWbI2VbMvWbcvWdJObdcvUdszUd8vVeJaee87Yfc3WgJyjhqGnitDYjaarldPZnrK2oNbborW5o9bbo9fbpLa6q9ndrL3ArtndscDDutzfu8fJwN7gwt7gxc/QyuHhy+HizeHi0NfX0+Pj19zb1+Tj2uXk29/e3uLg3+Lh3+bl4uXj4ufl4+fl5Ofl5ufl5ujm5+jmySDnBAAAAFp0Uk5TAAECAgMEBAYHCA0NDg4UGRogIiMmKSssLzU7PkJJT1JTVFliY2hrdHZ3foSFhYeJjY2QkpugqbG1tre5w8zQ09XY3uXn6+zx8vT09vf4+Pj5+fr6/P39/f3+gz7SsAAAAVVJREFUOMtjYKA7EBDnwCPLrObS1BRiLoJLnte6CQy8FLHLCzs2QUG4FjZ5GbcmBDDjxJBXDWxCBrb8aM4zbkIDzpLYnAcE9VXlJSWlZRU13koIeW57mGx5XjoMZEUqwxWYQaQbSzLSkYGfKFSe0QMsX5WbjgY0YS4MBplemI4BdGBW+DQ11eZiymfqQuXZIjqwyadPNoSZ4L+0FVM6e+oGI6g8a9iKNT3o8kVzNkzRg5lgl7p4wyRUL9Yt2jAxVh6mQCogae6GmflI8p0r13VFWTHBQ0rWPW7ahgWVcPm+9cuLoyy4kCJDzCm6d8PSFoh0zvQNC5OjDJhQopPPJqph1doJBUD5tnkbZiUEqaCnB3bTqLTFG1bPn71kw4b+GFdpLElKIzRxxgYgWNYc5SCENVHKeUaltHdXx0dZ8uBI1hJ2UUDgq82CM2MwKeibqAvSO7MCABq0wXEPiqWEAAAAAElFTkSuQmCC"></a></li><li>Tiles © <a href="http://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC BY-SA</a></li><li>Data © <a href="http://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="http://www.openstreetmap.org/copyright">ODbL</a></li></ul><button class="ol-has-tooltip" type="button"><span>i</span><span role="tooltip">Attributions</span></button></div></div></div></div>
-      <div class="row main-row">
+        <div id="map">
+
+            
+
+            <div class="ol-viewport" style="position: relative; overflow: hidden; width: 100%; height: 100%;">
+                <script>
+                    // Get the modal
+                  function initMap() {
+                    var uluru = {lat: -23.599691, lng:  -46.715144};
+                    var map = new google.maps.Map(document.getElementById('map'), {
+                      zoom: 16,
+                      center: uluru
+                  });
+
+                    var marker = new google.maps.Marker({
+                      position: uluru,
+                      map: map
+                  });
+
+                    var image = '../images/new_truck.png';
+                    var truckMarker = new google.maps.Marker({
+                        position: {lat: -23.599421, lng:  -46.715174},
+                        map: map,
+                        icon: image
+                    });
+
+                    var truckMarker2 = new google.maps.Marker({
+                        position: {lat: -23.598504, lng:  -46.716067},
+                        map: map,
+                        icon: image
+                    });
+
+                    var truckMarker3 = new google.maps.Marker({
+                        position: {lat: -23.599526,lng: -46.719071},
+                        map: map,
+                        icon: image
+                    });
+
+                    var truckMarker4 = new google.maps.Marker({
+                        position: {lat: -23.602608, lng: -46.713983},
+                        map: map,
+                        icon: image
+                    });
+
+                    truckMarker.addListener('click', function() {
+                        map.setCenter(marker.getPosition());
+                        modal.style.display = "block";
+
+
+                    });
+
+                    truckMarker2.addListener('click', function() {
+                        map.setCenter(marker.getPosition());
+                        modal.style.display = "block";
+                    });
+
+                    truckMarker3.addListener('click', function() {
+                        map.setCenter(marker.getPosition());
+                        modal.style.display = "block";
+                    });
+
+                    truckMarker4.addListener('click', function() {
+                        map.setCenter(marker.getPosition());
+                        modal.style.display = "block";
+                    });
+
+                    span.onclick = function() {
+                        modal.style.display = "none";
+                    }
+
+                    // When the user clicks anywhere outside of the modal, close it
+                    window.onclick = function(event) {
+                        if (event.target == modal) {
+                            modal.style.display = "none";
+                        }
+                    }
+
+
+
+
+                    
+
+                }
+            </script>
+           
+
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBkZRlmZqGo1FVbvgDJ_IWKi7coC_Z_w6A&callback=initMap">
+    </script><div class="ol-overlaycontainer"></div><div class="ol-overlaycontainer-stopevent"><div class="ol-zoom ol-unselectable ol-control" style="margin-left: 362px;"><button class="ol-zoom-in ol-has-tooltip" type="button"><span role="tooltip">Zoom in</span>+</button><button class="ol-zoom-out  ol-has-tooltip" type="button"><span role="tooltip">Zoom out</span>−</button></div><div class="ol-rotate ol-unselectable ol-control" style="opacity: 0;"><button class="ol-rotate-reset ol-has-tooltip" name="ResetRotation" type="button"><span role="tooltip">Reset rotation</span><span class="ol-compass" style="transform: rotate(0deg);">⇧</span></button></div><div class="ol-attribution ol-unselectable ol-control ol-collapsed"><ul><li style=""><a href="http://openlayers.org/" target="_blank"></li><li>Tiles © <a href="http://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC BY-SA</a></li><li>Data © <a href="http://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="http://www.openstreetmap.org/copyright">ODbL</a></li></ul><button class="ol-has-tooltip" type="button"><span>i</span><span role="tooltip">Attributions</span></button></div></div></div></div>
+    <div class="row main-row">
         <div class="col-sm-4 col-md-3 sidebar sidebar-left pull-left">
+<<<<<<< HEAD
           <div class="panel-group sidebar-body" id="accordion-left">
             <div class="panel panel-default">
               <div class="panel-heading">
@@ -248,40 +280,155 @@
                   <a href="#" class="list-group-item">
                     <i class="fa fa-truck"></i> GZO-5681
                   </a>
+=======
+            <div class="panel-group sidebar-body" id="accordion-left">
+
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" href="#layers">
+                                <i class="fa fa-list-alt"></i>
+                                Em movimento:
+                            </a>
+
+                            <span class="pull-right" id="slide-submenu">
+                                <i class="fa fa-chevron-left"></i>
+                            </span>
+                        </h4>
+                    </div>
+                    
+                    <div id="layers" class="panel-collapse collapse in" >
+                        <div class="panel-body list-group" style="max-height: 1%">
+                            <a href="#" id="plate1" class="list-group-item">
+                                <i class="fa fa-truck"></i> EIN-2220
+                            </a>
+
+                            <a href="#" id="plate2" class="list-group-item">
+                                <i class="fa fa-truck"></i> HOS-3456 
+                            </a>
+
+                            <a href="#" id="plate3" class="list-group-item">
+                                <i class="fa fa-truck"></i> GRU-1010
+                            </a>
+
+                            <a href="#" id="plate4" class="list-group-item">
+                                <i class="fa fa-truck"></i> GZO-5681
+                            </a>   
+                        </div>
+                    </div>
+>>>>>>> ad8374c73ca9b20508db9c3b5d413f52e3666cc8
                 </div>
-              </div>
-            </div>
-            <div class="panel panel-default">
-              <div class="panel-heading">
-                <h4 class="panel-title">
-                  <a data-toggle="collapse" href="#properties">
-                    <i class="fa fa-list-alt"></i>
-                     Mais Detalhes
-                  </a>
-                </h4>
-              </div>
-              <div id="properties" class="panel-collapse collapse in">
-                <div class="panel-body">
-                  <p>
-                 		17 Vans em movimento</p>
-                  <p>
-                		5432 Amostras em transporte
-                  </p>
-                  <p>
-                  	Horário de Saída 08h03
-                  </p>
-                  <p>
-                  	Horário de Estimado de Chegada 08h03
-                  </p>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" href="#properties">
+                                <i class="fa fa-list-alt"></i>
+                                Mais Detalhes
+                            </a>
+                        </h4>
+                    </div>
+
+                    <div id="properties" class="panel-collapse collapse in">
+                        <div class="panel-body">
+                            <p ><a href="#" style="color:#c15603">2 transportes solicitam sua atenção!</a></p>
+                            <p>17 Vans em movimento</p>
+                            <p>5432 Amostras em transporte</p>
+                        </div>
+                    </div>
                 </div>
-              </div>
+
+
+                <div id="myModal" class="modal">
+
+                    <!-- Modal content -->
+                    <div class="modal-content">
+                        <span class="close">x</span>
+
+                        <h3>Status das amostras</h3>           
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>ID Cooler</th>
+                                        <th>Amostras</th>
+                                        <th>Temperatura</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>A234NFOW49</td>
+                                        <td><a href="amostras.html">35 amostras</a></td>
+                                        <td style="color: #0377bf">11ºC</td>
+                                    </tr>
+                                    <tr>
+                                        <td>FDJ038GHDS</td>
+                                        <td><a href="amostras.html">35 amostras</a></td>
+                                        <td style="color: #bf0303">17ºC</td>
+                                    </tr>
+                                    <tr>
+                                        <td>DM438DJSH2</td>
+                                        <td><a href="amostras.html">35 amostras</a></td>
+                                        <td style="color: #c15603">13ºC</td>
+                                    </tr>
+                                    <tr>
+                                        <td>A234HGT22F</td>
+                                        <td><a href="amostras.html">35 amostras</a></td>
+                                        <td style="color: #0377bf">11ºC</td>
+                                    </tr>
+                                    <tr>
+                                        <td>QWERTY56F4</td>
+                                        <td><a href="amostras.html">35 amostras</a></td>
+                                        <td style="color: #0377bf">10ºC</td>
+                                    </tr>
+                                </tbody>
+                          </table>
+                    </div>
+                </div>
+
+
+                <script>
+                    // Get the modal
+                    var modal = document.getElementById('myModal');
+
+                    // Get the button that opens the modal
+                    var btn = document.getElementById("myBtn");
+
+                    // Get the button that opens the modal
+                    var plate1 = document.getElementById("plate1");
+
+                    // Get the button that opens the modal
+                    var plate3 = document.getElementById("plate3");
+
+                    // Get the <span> element that closes the modal
+                    var span = document.getElementsByClassName("close")[0];
+
+                    plate1.onclick = function() {
+                       modal.style.display = "block";
+                    }
+
+                    plate2.onclick = function() {
+                       modal.style.display = "block";
+                    }
+
+                    plate3.onclick = function() {
+                        modal.style.display = "block";
+                    }
+
+                    plate4.onclick = function() {
+                       modal.style.display = "block";
+                    }
+
+                    
+                </script>
+
             </div>
-          </div>
         </div>
-      </div>
-      <div class="mini-submenu mini-submenu-left pull-left">
+    </div>
+
+
+    <div class="mini-submenu mini-submenu-left pull-left">
         <i class="fa fa-list-alt"></i>
-      </div>
-    
-  
-</body></html>
+    </div>
+
+
+    </body></html>

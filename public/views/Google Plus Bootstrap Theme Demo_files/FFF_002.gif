@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Preview and download free themes and templates for twitter bootstrap or submit your bootstrap theme for free.">
+    <title>UseBootstrap - Free Themes for Bootstrap</title>
+        <link href="/assets/ico/favicon.png" rel="icon" type="image/x-icon" />
+    <link href="/assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="/assets/css/main.min.css" rel="stylesheet" />
+    <link href="/assets/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <link href="/assets/css/social-buttons.min.css" rel="stylesheet" />
+    <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic' rel='stylesheet' type='text/css' />
+    <link href='http://fonts.googleapis.com/css?family=Raleway:400,300,700' rel='stylesheet' type='text/css' />
+    <link href="/assets/ico/favicon.png" rel="shortcut icon" />
+    <link href="/assets/ico/favicon.png" rel="apple-touch-icon" />
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+      (adsbygoogle = window.adsbygoogle || []).push({
+        google_ad_client: "ca-pub-9906660417880892",
+        enable_page_level_ads: true
+      });
+    </script>  </head>
+  
+  <body data-spy="scroll" data-offset="0" data-target="#navigation">
+	
+    <!-- Fixed navbar -->
+	<div id="navigation" class="navbar navbar-theme1 navbar-fixed-top">
+	  <div class="container">
+		<div class="navbar-header">
+		  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+		  </button>
+		  <a class="navbar-brand" href="http://usebootstrap.com/" title="usebootstrap"><img src="/assets/img/logo.png" width="36" height="34" alt="usebootstrap-logo" /></a>
+		</div>
+		<div class="navbar-collapse collapse">
+		  <ul class="nav navbar-nav navbar-top">
+			<li class="active"><a href="/" class="smothscroll"><span class="glyphicon glyphicon-home"></span> Home</a></li>
+			<!--<li><a href="/#main" class="smothscroll">Themes</a></li>-->
+            <!--<li><a href="/submit-theme" class="smothscroll">Submit Theme</a></li>-->
+            <li>
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-check"></span> Free Themes <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+              	<li ><a href="/themes/landing">Landing</a></li><li ><a href="/themes/corporate-business">Corporate & Business</a></li><li ><a href="/themes/portfolio">Portfolio</a></li><li ><a href="/themes/resume-cv">Resume & CV</a></li><li ><a href="/themes/ecommerce">E-Commerce</a></li><li ><a href="/themes/blog-magazine">Blog & Magazine</a></li><li ><a href="/themes/admin-dashboard">Admin & Dashboard</a></li><li ><a href="/themes/templates">Templates</a></li><li ><a href="/themes/cards">Cards</a></li><li ><a href="/themes/photography">Photography</a></li>                <!--<li class="divider"></li>-->
+              </ul>
+            </li>
+            <li><a href="/premium-themes" target="_blank"><span class="glyphicon glyphicon-star"></span> Premium Themes</a></li>
+            <li ><a href="/submit-theme"><span class="glyphicon glyphicon-cloud-upload"></span> Submit Your Theme</a></li>
+		  </ul>
+          <form class="navbar-form navbar-right" role="form" method="get" action="/search">
+            <div class="form-group">
+              <input id="k" name="k" type="text" class="form-control" placeholder="Search themes">
+            </div>
+            <button type="submit" class="btn btn-success"><span class="glyphicon glyphicon-search"></span></button>
+          </form>
+		</div><!--/.nav-collapse -->
+	  </div>
+	</div>    
+    	<section id="home"></section>
+	<div id="headerwrap">
+	    <div class="container">
+	    	<div class="row">
+	    		<div class="col-lg-7">
+                    <h1>Largest Collection of Free Bootstrap Themes</h1>
+                    <p>UseBootstrap provides high quality and unique themes based on Twitter Bootstrap framework. You can download and use these Bootstrap themes freely in your personal and business sites.</p>
+                    <p>Developers, it is free to upload and publish your theme on UseBootstrap. We are developing our submission system and it will be ready soon. Meanwhile you can subscribe our mailing list to get notified about important updates.</p>
+                    
+                    <a class="btn btn-success btn-lg btn-explore" href="/?s=latest&p=1"><span class="glyphicon glyphicon-th"></span> Explore Free Themes</a> &nbsp; <a class="btn btn-danger btn-lg btn-explore" href="/premium-themes" target="_blank"><span class="glyphicon glyphicon-star"></span> Premium Themes</a><!--<a class="btn btn-warning btn-lg btn-explore" href="/submit-theme"><span class="glyphicon glyphicon-cloud-upload"></span> Submit Your Theme</a>-->
+					<br>
+	    		</div>
+	    		<div class="col-lg-5 centered">
+                	<img src="assets/img/bootstrap-themes.png" alt="bootstrap-themes"/>
+                </div>
+	    	</div>
+	    </div> <!--/ .container -->
+	</div><!--/ #headerwrap -->
+	
+	<section id="desc"></section>
+	<!-- INTRO WRAP -->
+	<div id="intro">
+		<div class="container">
+			<div class="row centered">
+				<!--<h1>Designed To Excel</h1>
+				<br>
+				<br>-->
+				<div class="col-lg-4">
+					<h3><img src="assets/img/free_48x48.png" alt="free-bootstrap-themes"> 60+ Free Bootstrap Themes</h3>
+					<p>All <strong>Twitter Bootstrap themes</strong> and templates published here are under MIT License and completely free to use or modify. <a href="javascript:;" data-toggle="modal" data-target="#newtobootstrap">New to Bootstrap?</a></p>
+				</div>
+				<div class="col-lg-4">
+					<h3><img src="assets/img/upload.png" alt="submit-your-theme"> Submit Your Theme</h3>
+					<p>Now we accept <strong>free themes</strong> from the publishers. If you want to publish your theme free in UseBootstrap, you can <a href="/submit-theme">submit it now</a>.</p>
+				</div>
+				<div class="col-lg-4">
+					<h3><img src="assets/img/newsletter_48x48.png" alt="subscribe-newsletter"> Subscribe</h3>
+                    <p>Receive weekly updates, new themes and more.</p>
+                    
+					<!-- Begin MailChimp Signup Form -->
+                    <div id="mc_embed_signup">
+                    <form action="http://android-market.us4.list-manage.com/subscribe/post?u=233abcc55c31b970e8ac1e44a&amp;id=4b48cfdb15" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="form-inline" role="form" target="_blank" novalidate> 
+                        <div class="form-group">
+                            <input type="email" value="" name="EMAIL" class="required email form-control" 
+                            id="mce-EMAIL" placeholder="E-mail address">
+                        </div>
+                        <div class="form-group">
+                            <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" 
+                            class="btn btn-success">
+                        </div>
+                        <div id="mce-responses" class="clear">
+                            <div class="response" id="mce-error-response" style="display:none"></div>
+                            <div class="response" id="mce-success-response" style="display:none"></div>
+                        </div>
+                        <div style="position: absolute; left: -5000px;"><input type="text" name="b_233abcc55c31b970e8ac1e44a_4b48cfdb15" value=""></div>
+                    </form>
+                    </div>
+                    <!--End mc_embed_signup-->
+				</div>
+			</div>
+			<br>
+			<hr>
+	    </div> <!--/ .container -->
+	</div><!--/ #introwrap -->
+    
+    <!-- NEW TO BOOTSTRAP MODAL WINDOW -->
+    <div class="modal fade" id="newtobootstrap" tabindex="-1" role="dialog" aria-labelledby="newtobootstrapLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <h4 class="modal-title" id="newtobootstrapLabel">New to Bootstrap?</h4>
+          </div>
+          <div class="modal-body">
+            <p><strong>Bootstrap is a framework to make your life easy.</strong> It is a combination of a css and a js files. You include these files in your web page and start using Boostrap styles (class definitions).</p>
+            
+            <p><strong>Bootstrap is responsive.</strong> When you use Bootstrap in your page, your page becomes responsive. You don't need to do anything special. Both desktop and mobile devices will show your webpage nicely.</p>
+            
+            <p><strong>Bootstrap covers almost everything.</strong> Forms, form elements, tables, overlay windows, carousels, tooltips, transitions, typography, images, icons, grid systems, navigation bars, menus and much more.</p>
+            
+            <p><strong>Easy to modify and themify.</strong> If you are a web developer, we recommend you to start over a ready theme and modify it as you wish. You can download free Bootstrap themes from our website. We don't offer paid themes at that time.</p>
+            
+          </div>
+          <div class="modal-footer">
+            <a class="btn btn-info" href="/?s=latest&amp;p=1"><span class="glyphicon glyphicon-th"></span> Explore Themes</a> <a class="btn btn-success" href="http://getbootstrap.com" target="_blank" rel="external nofollow" ><span class="glyphicon glyphicon-cloud-download"></span> Download Bootstrap</a> <button type="button" class="btn btn-danger" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> Close Window</button>
+          </div>
+        </div>
+      </div>
+    </div>
+		
+	<div class="container" id="main">
+    	<nav class="navbar navbar-default">
+          <div class="container">
+              <span style="padding: 13px 10px 9px 0px; float: left;"><strong>Bootstrap Themes </strong></span>
+              <!--<span class="glyphicon glyphicon-th-list" style="padding: 13px 10px 9px 0px; float: left;"></span>-->
+              <ul class="nav navbar-nav">
+                <li class="active"><a href="./?s=latest"><span class="glyphicon glyphicon-time"></span> Latest Themes</a></li>
+                <li ><a href="?s=popular"><span class="glyphicon glyphicon-heart"></span> Popular Themes</a></li>
+                <li ><a href="?s=framework"><span class="glyphicon glyphicon-th-list"></span> Newest Framework</a></li>
+              </ul>
+              <span style="padding: 11px 0px 9px 0px; float: right;">Page 1 of 5 &nbsp; <a class="btn btn-default btn-sm disabled" href="?s=latest&amp;p=0"><span class="glyphicon glyphicon-chevron-left"></span></a> <a class="btn btn-default btn-sm " href="?s=latest&amp;p=2"><span class="glyphicon glyphicon-chevron-right"></span></a></span>          </div>
+        </nav>
+        
+		<div class="row">
+      	    
+              			<div class="col-sm-4">
+              	<div class="panel panel-default">
+                  	
+                    <div class="panel-heading" style="line-height: 1 !important; padding: 1px 15px;">
+                    	<h3><a href="/theme/amethyst">Amethyst</a></h3>
+                    </div>
+                	
+                    <div class="panel-body">
+                    	<a href="/theme/amethyst"><img src="/assets/img/amethyst.jpg" alt="amethyst-bootstrap-theme" class="img-responsive" /></a>
+                    </div>
+                    
+                	<div class="panel-footer">
+						<div class="btn-group"><a class="btn btn-success" href="/theme/amethyst"><span class="glyphicon glyphicon-th-list"></span> Details</a></div>
+						<div class="btn-group"><a class="btn btn-info" href="/preview/amethyst" target="_blank"><span class="glyphicon glyphicon-eye-open"></span> Preview</a></div>
+                        <!--<span class="badge pull-right">3.0</span>-->
+					</div>
+                </div>
+      		</div>
+            
+              			<div class="col-sm-4">
+              	<div class="panel panel-default">
+                  	
+                    <div class="panel-heading" style="line-height: 1 !important; padding: 1px 15px;">
+                    	<h3><a href="/theme/docstrap">DocStrap</a></h3>
+                    </div>
+                	
+                    <div class="panel-body">
+                    	<a href="/theme/docstrap"><img src="/assets/img/docstrap.png" alt="docstrap-bootstrap-theme" class="img-responsive" /></a>
+                    </div>
+                    
+                	<div class="panel-footer">
+						<div class="btn-group"><a class="btn btn-success" href="/theme/docstrap"><span class="glyphicon glyphicon-th-list"></span> Details</a></div>
+						<div class="btn-group"><a class="btn btn-info" href="/preview/docstrap" target="_blank"><span class="glyphicon glyphicon-eye-open"></span> Preview</a></div>
+                        <!--<span class="badge pull-right">3.3.4</span>-->
+					</div>
+                </div>
+      		</div>
+            
+              			<div class="col-sm-4">
+              	<div class="panel panel-default">
+                  	
+                    <div class="panel-heading" style="line-height: 1 !important; padding: 1px 15px;">
+                    	<h3><a href="/theme/rubino">Rubino</a></h3>
+                    </div>
+                	
+                    <div class="panel-body">
+                    	<a href="/theme/rubino"><img src="/assets/img/rubino.png" alt="rubino-bootstrap-theme" class="img-responsive" /></a>
+                    </div>
+                    
+                	<div class="panel-footer">
+						<div class="btn-group"><a class="btn btn-success" href="/theme/rubino"><span class="glyphicon glyphicon-th-list"></span> Details</a></div>
+						<div class="btn-group"><a class="btn btn-info" href="/preview/rubino" target="_blank"><span class="glyphicon glyphicon-eye-open"></span> Preview</a></div>
+                        <!--<span class="badge pull-right">3.3.4</span>-->
+					</div>
+                </div>
+      		</div>
+            
+              			<div class="col-sm-4">
+              	<div class="panel panel-default">
+                  	
+                    <div class="panel-heading" style="line-height: 1 !important; padding: 1px 15px;">
+                    	<h3><a href="/theme/eshopper">E-Shopper</a></h3>
+                    </div>
+                	
+                    <div class="panel-body">
+                    	<a href="/theme/eshopper"><img src="/assets/img/eshopper.jpg" alt="eshopper-bootstrap-theme" class="img-responsive" /></a>
+                    </div>
+                    
+                	<div class="panel-footer">
+						<div class="btn-group"><a class="btn btn-success" href="/theme/eshopper"><span class="glyphicon glyphicon-th-list"></span> Details</a></div>
+						<div class="btn-group"><a class="btn btn-info" href="/preview/eshopper" target="_blank"><span class="glyphicon glyphicon-eye-open"></span> Preview</a></div>
+                        <!--<span class="badge pull-right">3.0.3</span>-->
+					</div>
+                </div>
+      		</div>
+            
+              			<div class="col-sm-4">
+              	<div class="panel panel-default">
+                  	
+                    <div class="panel-heading" style="line-height: 1 !important; padding: 1px 15px;">
+                    	<h3><a href="/theme/nova">Nova</a></h3>
+                    </div>
+                	
+                    <div class="panel-body">
+                    	<a href="/theme/nova"><img src="/assets/img/nova.jpg" alt="nova-bootstrap-theme" class="img-responsive" /></a>
+                    </div>
+                    
+                	<div class="panel-footer">
+						<div class="btn-group"><a class="btn btn-success" href="/theme/nova"><span class="glyphicon glyphicon-th-list"></span> Details</a></div>
+						<div class="btn-group"><a class="btn btn-info" href="/preview/nova" target="_blank"><span class="glyphicon glyphicon-eye-open"></span> Preview</a></div>
+                        <!--<span class="badge pull-right">2.3.2</span>-->
+					</div>
+                </div>
+      		</div>
+            
+              			<div class="col-sm-4">
+              	<div class="panel panel-default">
+                  	
+                    <div class="panel-heading" style="line-height: 1 !important; padding: 1px 15px;">
+                    	<h3><a href="/theme/glassy-coming-soon">Glassy Coming Soon</a></h3>
+                    </div>
+                	
+                    <div class="panel-body">
+                    	<a href="/theme/glassy-coming-soon"><img src="/assets/img/glassy-coming-soon.jpg" alt="glassy-coming-soon-bootstrap-theme" class="img-responsive" /></a>
+                    </div>
+                    
+                	<div class="panel-footer">
+						<div class="btn-group"><a class="btn btn-success" href="/theme/glassy-coming-soon"><span class="glyphicon glyphicon-th-list"></span> Details</a></div>
+						<div class="btn-group"><a class="btn btn-info" href="/preview/glassy-coming-soon" target="_blank"><span class="glyphicon glyphicon-eye-open"></span> Preview</a></div>
+                        <!--<span class="badge pull-right">2.3.0</span>-->
+					</div>
+                </div>
+      		</div>
+            
+              			<div class="col-sm-4">
+              	<div class="panel panel-default">
+                  	
+                    <div class="panel-heading" style="line-height: 1 !important; padding: 1px 15px;">
+                    	<h3><a href="/theme/andia">Andia</a></h3>
+                    </div>
+                	
+                    <div class="panel-body">
+                    	<a href="/theme/andia"><img src="/assets/img/andia.jpg" alt="andia-bootstrap-theme" class="img-responsive" /></a>
+                    </div>
+                    
+                	<div class="panel-footer">
+						<div class="btn-group"><a class="btn btn-success" href="/theme/andia"><span class="glyphicon glyphicon-th-list"></span> Details</a></div>
+						<div class="btn-group"><a class="btn btn-info" href="/preview/andia" target="_blank"><span class="glyphicon glyphicon-eye-open"></span> Preview</a></div>
+                        <!--<span class="badge pull-right">2.2.1</span>-->
+					</div>
+                </div>
+      		</div>
+            
+              			<div class="col-sm-4">
+              	<div class="panel panel-default">
+                  	
+                    <div class="panel-heading" style="line-height: 1 !important; padding: 1px 15px;">
+                    	<h3><a href="/theme/stylish">Stylish</a></h3>
+                    </div>
+                	
+                    <div class="panel-body">
+                    	<a href="/theme/stylish"><img src="/assets/img/stylish.jpg" alt="stylish-bootstrap-theme" class="img-responsive" /></a>
+                    </div>
+                    
+                	<div class="panel-footer">
+						<div class="btn-group"><a class="btn btn-success" href="/theme/stylish"><span class="glyphicon glyphicon-th-list"></span> Details</a></div>
+						<div class="btn-group"><a class="btn btn-info" href="/preview/stylish" target="_blank"><span class="glyphicon glyphicon-eye-open"></span> Preview</a></div>
+                        <!--<span class="badge pull-right">2.1.1</span>-->
+					</div>
+                </div>
+      		</div>
+            
+              			<div class="col-sm-4">
+              	<div class="panel panel-default">
+                  	
+                    <div class="panel-heading" style="line-height: 1 !important; padding: 1px 15px;">
+                    	<h3><a href="/theme/kataklimt">KataKlimt</a></h3>
+                    </div>
+                	
+                    <div class="panel-body">
+                    	<a href="/theme/kataklimt"><img src="/assets/img/kataklimt.jpg" alt="kataklimt-bootstrap-theme" class="img-responsive" /></a>
+                    </div>
+                    
+                	<div class="panel-footer">
+						<div class="btn-group"><a class="btn btn-success" href="/theme/kataklimt"><span class="glyphicon glyphicon-th-list"></span> Details</a></div>
+						<div class="btn-group"><a class="btn btn-info" href="/preview/kataklimt" target="_blank"><span class="glyphicon glyphicon-eye-open"></span> Preview</a></div>
+                        <!--<span class="badge pull-right">2.1.1</span>-->
+					</div>
+                </div>
+      		</div>
+            
+              			<div class="col-sm-4">
+              	<div class="panel panel-default">
+                  	
+                    <div class="panel-heading" style="line-height: 1 !important; padding: 1px 15px;">
+                    	<h3><a href="/theme/stylish-portfolio">Stylish Portfolio</a></h3>
+                    </div>
+                	
+                    <div class="panel-body">
+                    	<a href="/theme/stylish-portfolio"><img src="/assets/img/stylish-portfolio.jpg" alt="stylish-portfolio-bootstrap-theme" class="img-responsive" /></a>
+                    </div>
+                    
+                	<div class="panel-footer">
+						<div class="btn-group"><a class="btn btn-success" href="/theme/stylish-portfolio"><span class="glyphicon glyphicon-th-list"></span> Details</a></div>
+						<div class="btn-group"><a class="btn btn-info" href="/preview/stylish-portfolio" target="_blank"><span class="glyphicon glyphicon-eye-open"></span> Preview</a></div>
+                        <!--<span class="badge pull-right">3.1.0</span>-->
+					</div>
+                </div>
+      		</div>
+            
+              			<div class="col-sm-4">
+              	<div class="panel panel-default">
+                  	
+                    <div class="panel-heading" style="line-height: 1 !important; padding: 1px 15px;">
+                    	<h3><a href="/theme/business-casual">Business Casual</a></h3>
+                    </div>
+                	
+                    <div class="panel-body">
+                    	<a href="/theme/business-casual"><img src="/assets/img/business-casual.jpg" alt="business-casual-bootstrap-theme" class="img-responsive" /></a>
+                    </div>
+                    
+                	<div class="panel-footer">
+						<div class="btn-group"><a class="btn btn-success" href="/theme/business-casual"><span class="glyphicon glyphicon-th-list"></span> Details</a></div>
+						<div class="btn-group"><a class="btn btn-info" href="/preview/business-casual" target="_blank"><span class="glyphicon glyphicon-eye-open"></span> Preview</a></div>
+                        <!--<span class="badge pull-right">3.1.0</span>-->
+					</div>
+                </div>
+      		</div>
+            
+              			<div class="col-sm-4">
+              	<div class="panel panel-default">
+                  	
+                    <div class="panel-heading" style="line-height: 1 !important; padding: 1px 15px;">
+                    	<h3><a href="/theme/grayscale">Grayscale</a></h3>
+                    </div>
+                	
+                    <div class="panel-body">
+                    	<a href="/theme/grayscale"><img src="/assets/img/grayscale.jpg" alt="grayscale-bootstrap-theme" class="img-responsive" /></a>
+                    </div>
+                    
+                	<div class="panel-footer">
+						<div class="btn-group"><a class="btn btn-success" href="/theme/grayscale"><span class="glyphicon glyphicon-th-list"></span> Details</a></div>
+						<div class="btn-group"><a class="btn btn-info" href="/preview/grayscale" target="_blank"><span class="glyphicon glyphicon-eye-open"></span> Preview</a></div>
+                        <!--<span class="badge pull-right">3.1.0</span>-->
+					</div>
+                </div>
+      		</div>
+            
+              			<div class="col-sm-4">
+              	<div class="panel panel-default">
+                  	
+                    <div class="panel-heading" style="line-height: 1 !important; padding: 1px 15px;">
+                    	<h3><a href="/theme/sb-admin-2">SB Admin 2</a></h3>
+                    </div>
+                	
+                    <div class="panel-body">
+                    	<a href="/theme/sb-admin-2"><img src="/assets/img/sb-admin-2.jpg" alt="sb-admin-2-bootstrap-theme" class="img-responsive" /></a>
+                    </div>
+                    
+                	<div class="panel-footer">
+						<div class="btn-group"><a class="btn btn-success" href="/theme/sb-admin-2"><span class="glyphicon glyphicon-th-list"></span> Details</a></div>
+						<div class="btn-group"><a class="btn btn-info" href="/preview/sb-admin-2" target="_blank"><span class="glyphicon glyphicon-eye-open"></span> Preview</a></div>
+                        <!--<span class="badge pull-right">3.1.0</span>-->
+					</div>
+                </div>
+      		</div>
+            
+              			<div class="col-sm-4">
+              	<div class="panel panel-default">
+                  	
+                    <div class="panel-heading" style="line-height: 1 !important; padding: 1px 15px;">
+                    	<h3><a href="/theme/sb-admin">SB Admin</a></h3>
+                    </div>
+                	
+                    <div class="panel-body">
+                    	<a href="/theme/sb-admin"><img src="/assets/img/sb-admin.jpg" alt="sb-admin-bootstrap-theme" class="img-responsive" /></a>
+                    </div>
+                    
+                	<div class="panel-footer">
+						<div class="btn-group"><a class="btn btn-success" href="/theme/sb-admin"><span class="glyphicon glyphicon-th-list"></span> Details</a></div>
+						<div class="btn-group"><a class="btn btn-info" href="/preview/sb-admin" target="_blank"><span class="glyphicon glyphicon-eye-open"></span> Preview</a></div>
+                        <!--<span class="badge pull-right">3.1.0</span>-->
+					</div>
+                </div>
+      		</div>
+            
+              			<div class="col-sm-4">
+              	<div class="panel panel-default">
+                  	
+                    <div class="panel-heading" style="line-height: 1 !important; padding: 1px 15px;">
+                    	<h3><a href="/theme/freelancer">Freelancer</a></h3>
+                    </div>
+                	
+                    <div class="panel-body">
+                    	<a href="/theme/freelancer"><img src="/assets/img/freelancer.jpg" alt="freelancer-bootstrap-theme" class="img-responsive" /></a>
+                    </div>
+                    
+                	<div class="panel-footer">
+						<div class="btn-group"><a class="btn btn-success" href="/theme/freelancer"><span class="glyphicon glyphicon-th-list"></span> Details</a></div>
+						<div class="btn-group"><a class="btn btn-info" href="/preview/freelancer" target="_blank"><span class="glyphicon glyphicon-eye-open"></span> Preview</a></div>
+                        <!--<span class="badge pull-right">3.1.1</span>-->
+					</div>
+                </div>
+      		</div>
+            
+                    </div>
+        
+        <nav class="navbar navbar-default">
+          <div class="container">
+              <span style="padding: 13px 10px 9px 0px; float: left;"><strong>Bootstrap Themes </strong></span>
+              <!--<span class="glyphicon glyphicon-th-list" style="padding: 13px 10px 9px 0px; float: left;"></span>-->
+              <ul class="nav navbar-nav">
+                <li class="active"><a href="./?s=latest"><span class="glyphicon glyphicon-time"></span> Latest Themes</a></li>
+                <li ><a href="?s=popular"><span class="glyphicon glyphicon-heart"></span> Popular Themes</a></li>
+                <li ><a href="?s=framework"><span class="glyphicon glyphicon-th-list"></span> Newest Framework</a></li>
+              </ul>
+              <span style="padding: 11px 0px 9px 0px; float: right;">Page 1 of 5 &nbsp; <a class="btn btn-default btn-sm disabled" href="?s=latest&amp;p=0"><span class="glyphicon glyphicon-chevron-left"></span></a> <a class="btn btn-default btn-sm " href="?s=latest&amp;p=2"><span class="glyphicon glyphicon-chevron-right"></span></a></span>          </div>
+        </nav>
+	</div>
+	
+	<div id="footer">
+  <div class="container">
+    <!--<p style="padding: 12px 0 0 0; float: right;">Follow us on <a href="https://twitter.com/usebootstrap" target="_blank" rel="nofollow"><img src="/assets/img/twitter.png" width="32" height="32"></a></p>-->
+    
+    <div style="float: right; margin-top: 16px;">
+        <!-- Twitter follow button -->
+    	<a href="https://twitter.com/usebootstrap" class="twitter-follow-button" data-show-count="false" data-size="large" data-lang="en" rel="external nofollow">Follow @usebootstrap</a>
+    	<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script> &nbsp 
+        <!-- Google+ button -->
+        <div class="g-plusone"></div>
+    </div>
+    
+    
+    <p class="text-muted">&copy;opyright <a href="http://usebootstrap.com">UseBootstrap</a> &middot; <a href="/privacy">Privacy</a> &middot; <a href="/sitemap">Sitemap</a> &nbsp; - &nbsp; Based on <a href="http://getbootstrap.com" target="_blank" rel="external nofollow">Bootstrap</a> &middot; <a href="https://en.wikipedia.org/wiki/Bootstrap_%28front-end_framework%29" rel="external nofollow" target="_blank">What is Bootstrap</a> &middot; <a href="https://plus.google.com/110406505661068922829?rel=author">Google</a></p>
+  </div>
+</div>
+
+<script src="/assets/js/jquery.min.js"></script>
+<script src="/assets/js/smoothscroll.js"></script>
+<script src="/assets/js/bootstrap.min.js"></script>
+<script src="/assets/js/main.js"></script>
+
+<script>
+  // Twitter
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-34569399-9', 'usebootstrap.com');
+  ga('require', 'displayfeatures');
+  ga('send', 'pageview');
+  
+  // Google+
+  (function() {
+	var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+	po.src = 'https://apis.google.com/js/platform.js';
+	var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+  })();
+</script>	
+  </body>
+</html>

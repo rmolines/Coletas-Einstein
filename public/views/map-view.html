@@ -166,8 +166,8 @@
               </div>
               <button type="submit" class="btn btn-default">Procurar</button>
             </form>
-            <ul class="nav navbar-nav navbar-right">
-              <li><a href="http://jumpinjackie.github.io/bootstrap-viewer-template/2-column/index.html#">Link</a></li>
+            <!--<ul class="nav navbar-nav navbar-right">
+              <li><!--<a href="http://jumpinjackie.github.io/bootstrap-viewer-template/2-column/index.html#">Link</a></li>
               <li class="dropdown">
                 <a href="http://jumpinjackie.github.io/bootstrap-viewer-template/2-column/index.html#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
                 <ul class="dropdown-menu">
@@ -178,7 +178,7 @@
                   <li><a href="http://jumpinjackie.github.io/bootstrap-viewer-template/2-column/index.html#">Separated link</a></li>
                 </ul>
               </li>
-            </ul>
+            </ul>-->
             </div><!-- /.navbar-collapse -->
             </div><!-- /.container-fluid -->
           </nav>
@@ -190,7 +190,6 @@
             <h3>My Google Maps Demo</h3>
     <div id="map"></div>
     <script>
-      var historicalOverlay;
 
       function initMap() {
         var uluru = {lat: -23.599691, lng:  -46.715144};
@@ -198,22 +197,50 @@
           zoom: 16,
           center: uluru
         });
+
         var marker = new google.maps.Marker({
           position: uluru,
           map: map
         });
 
-        var imageBounds = {
-          north: 40.773941,
-          south: 40.712216,
-          east: -74.12544,
-          west: -74.22655
-        };
+        var image = '../images/new_truck.png';
+  		var truckMarker = new google.maps.Marker({
+    		position: {lat: -23.599421, lng:  -46.715174},
+    		map: map,
+    		icon: image
+  		});
 
-        historicalOverlay = new google.maps.GroundOverlay(
-            'https://www.lib.utexas.edu/maps/historical/newark_nj_1922.jpg',
-            imageBounds);
-        historicalOverlay.setMap(map);
+  		var truckMarker2 = new google.maps.Marker({
+    		position: {lat: -23.598504, lng:  -46.716067},
+    		map: map,
+    		icon: image
+  		});
+
+  		var truckMarker3 = new google.maps.Marker({
+    		position: {lat: -23.599526,lng: -46.719071},
+    		map: map,
+    		icon: image
+  		});
+
+  		var truckMarker4 = new google.maps.Marker({
+    		position: {lat: -23.602608, lng: -46.713983},
+    		map: map,
+    		icon: image
+  		});
+
+  		truckMarker.addListener('click', function() {
+    		map.setZoom(8);
+    		map.setCenter(marker.getPosition());
+  		});
+
+  		truckMarker2.addListener('click', function() {
+    		map.setZoom(8);
+    		map.setCenter(marker.getPosition());
+  		});
+
+
+  		
+
       }
     </script>
     <script async defer
@@ -264,15 +291,15 @@
               <div id="properties" class="panel-collapse collapse in">
                 <div class="panel-body">
                   <p>
-                 17 Vans em movimento</p>
+                 		17 Vans em movimento</p>
                   <p>
-                5432 Amostras em transporte
+                		5432 Amostras em transporte
                   </p>
                   <p>
-                  Horário de Saída 08h03
+                  	Horário de Saída 08h03
                   </p>
                   <p>
-                  Horário de Estimado de Chegada 08h03
+                  	Horário de Estimado de Chegada 08h03
                   </p>
                 </div>
               </div>

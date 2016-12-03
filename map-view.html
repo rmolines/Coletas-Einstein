@@ -4,9 +4,9 @@
     
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <link rel="stylesheet" href="../css/ol.css">
-    <link rel="stylesheet" href="../css/bootstrap.min.css">
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/ol.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/font-awesome.min.css">
 
     <title>Localize Sua Amostra</title>
     <style type="text/css">
@@ -59,7 +59,6 @@
     <script type="text/javascript" src="./js/ol.js"></script>
     <script type="text/javascript" src="./js/jquery-2.1.1.min.js"></script>
     <script type="text/javascript" src="./js/bootstrap.min.js"></script>
-
     <script type="text/javascript">
 
       function applyMargins() {
@@ -130,23 +129,20 @@
         <div class="container-fluid">
           <!-- Brand and toggle get grouped for better mobile display -->
           <div class="navbar-header">
-            <img src="../images/hospital-albert-einstein-original.jpg" style="width:15%">
-
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
             <span class="sr-only">Toggle navigation</span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             </button>
-
-            <!--<a class="navbar-brand" href="login.html#">Portal Coletas Einstein</a>-->
-            
-
+            <a class="navbar-brand" href="login.html#">Portal Coletas Einstein</a>
           </div>
           <!-- Collect the nav links, forms, and other content for toggling -->
-          <!--<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
-            <li class="dropdown">
+              <li class="active"><a href="http://jumpinjackie.github.io/bootstrap-viewer-template/2-column/index.html#">Link</a></li>
+              <li><a href="http://jumpinjackie.github.io/bootstrap-viewer-template/2-column/index.html#">Link</a></li>
+              <li class="dropdown">
                 <a href="http://jumpinjackie.github.io/bootstrap-viewer-template/2-column/index.html#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
                 <ul class="dropdown-menu">
                   <li><a href="http://jumpinjackie.github.io/bootstrap-viewer-template/2-column/index.html#">Action</a></li>
@@ -157,17 +153,16 @@
                   <li class="divider"></li>
                   <li><a href="http://jumpinjackie.github.io/bootstrap-viewer-template/2-column/index.html#">One more separated link</a></li>
                 </ul>
-              </li>-->
-              
+              </li>
             </ul>
             <form class="navbar-form navbar-left" role="search">
               <div class="form-group">
-                <input type="text" class="form-control" placeholder="Procurar van por placa">
+                <input type="text" class="form-control" placeholder="Search">
               </div>
-              <button type="submit" class="btn btn-default">Procurar</button>
+              <button type="submit" class="btn btn-default">Submit</button>
             </form>
-            <!--<ul class="nav navbar-nav navbar-right">
-              <li><!--<a href="http://jumpinjackie.github.io/bootstrap-viewer-template/2-column/index.html#">Link</a></li>
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="http://jumpinjackie.github.io/bootstrap-viewer-template/2-column/index.html#">Link</a></li>
               <li class="dropdown">
                 <a href="http://jumpinjackie.github.io/bootstrap-viewer-template/2-column/index.html#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
                 <ul class="dropdown-menu">
@@ -178,7 +173,7 @@
                   <li><a href="http://jumpinjackie.github.io/bootstrap-viewer-template/2-column/index.html#">Separated link</a></li>
                 </ul>
               </li>
-            </ul>-->
+            </ul>
             </div><!-- /.navbar-collapse -->
             </div><!-- /.container-fluid -->
           </nav>
@@ -190,57 +185,16 @@
             <h3>My Google Maps Demo</h3>
     <div id="map"></div>
     <script>
-
       function initMap() {
         var uluru = {lat: -23.599691, lng:  -46.715144};
         var map = new google.maps.Map(document.getElementById('map'), {
           zoom: 16,
           center: uluru
         });
-
         var marker = new google.maps.Marker({
           position: uluru,
           map: map
         });
-
-        var image = '../images/new_truck.png';
-  		var truckMarker = new google.maps.Marker({
-    		position: {lat: -23.599421, lng:  -46.715174},
-    		map: map,
-    		icon: image
-  		});
-
-  		var truckMarker2 = new google.maps.Marker({
-    		position: {lat: -23.598504, lng:  -46.716067},
-    		map: map,
-    		icon: image
-  		});
-
-  		var truckMarker3 = new google.maps.Marker({
-    		position: {lat: -23.599526,lng: -46.719071},
-    		map: map,
-    		icon: image
-  		});
-
-  		var truckMarker4 = new google.maps.Marker({
-    		position: {lat: -23.602608, lng: -46.713983},
-    		map: map,
-    		icon: image
-  		});
-
-  		truckMarker.addListener('click', function() {
-    		map.setZoom(8);
-    		map.setCenter(marker.getPosition());
-  		});
-
-  		truckMarker2.addListener('click', function() {
-    		map.setZoom(8);
-    		map.setCenter(marker.getPosition());
-  		});
-
-
-  		
-
       }
     </script>
     <script async defer
@@ -254,27 +208,23 @@
                 <h4 class="panel-title">
                   <a data-toggle="collapse" href="#layers">
                     <i class="fa fa-list-alt"></i>
-                    Em movimento:
+                    Camadas
                   </a>
                   <span class="pull-right slide-submenu">
                     <i class="fa fa-chevron-left"></i>
                   </span>
                 </h4>
               </div>
-              <div id="layers" class="panel-collapse collapse in" >
-                <div class="panel-body list-group" style="max-height: 1%">
+              <div id="layers" class="panel-collapse collapse in">
+                <div class="panel-body list-group">
                   <a href="#" class="list-group-item">
-
-                    <i class="fa fa-truck"></i> EIN-2220
+                    <i class="fa fa-globe"></i> Amostra
                   </a>
                   <a href="#" class="list-group-item">
-                    <i class="fa fa-truck"></i> HOS-3456 
+                    <i class="fa fa-globe"></i> Clínica 
                   </a>
                   <a href="#" class="list-group-item">
-                    <i class="fa fa-truck"></i> GRU-1010
-                  </a>
-                  <a href="#" class="list-group-item">
-                    <i class="fa fa-truck"></i> GZO-5681
+                    <i class="fa fa-globe"></i> Hospital
                   </a>
                 </div>
               </div>
@@ -291,15 +241,15 @@
               <div id="properties" class="panel-collapse collapse in">
                 <div class="panel-body">
                   <p>
-                 		17 Vans em movimento</p>
+                 Velocidade 40 km/h</p>
                   <p>
-                		5432 Amostras em transporte
+                  Temperatura 4°C
                   </p>
                   <p>
-                  	Horário de Saída 08h03
+                  Horário de Saída 08h03
                   </p>
                   <p>
-                  	Horário de Estimado de Chegada 08h03
+                  Horário de Estimado de Chegada 08h03
                   </p>
                 </div>
               </div>
